@@ -5,13 +5,11 @@
     box-sizing: border-box;
 }
 
-/* Set base styles for the document */
-body,
-html {
+/* Base styles */
+body, html {
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
-    /* Allow vertical scrolling but prevent horizontal scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: 'Nunito Sans', Arial, sans-serif;
     background-color: #F8F6F5;
     color: #627EA8;
@@ -23,14 +21,12 @@ html {
 .wormhole-container {
     position: relative;
     height: 100vh;
-    /* Restrict the wormhole to 3/4 of the viewport height */
     width: 100%;
     background: transparent;
     overflow: hidden;
-    /* Prevent scrolling inside the wormhole area */
 }
 
-/* Wormhole animation styles */
+/* Wormhole animation */
 .wormhole {
     position: absolute;
     top: 0;
@@ -41,25 +37,13 @@ html {
     animation: wormhole-animation 6s infinite linear;
 }
 
-/* Wormhole animation keyframes */
 @keyframes wormhole-animation {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: scale(1.5);
-        opacity: 0.6;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+    0%   { transform: scale(1);   opacity: 1; }
+    50%  { transform: scale(1.5); opacity: 0.6; }
+    100% { transform: scale(1);   opacity: 1; }
 }
 
-/* Text overlay inside the wormhole */
+/* Wormhole text overlay */
 .wormhole-text {
     position: absolute;
     top: 50%;
@@ -68,261 +52,171 @@ html {
     text-align: center;
     color: white;
     font-family: 'Orbitron', sans-serif;
+    padding: 0 20px; /* Prevent text from touching screen edges */
 }
 
 .wormhole-text h1 {
-    font-size: 80px;
+    font-size: 4rem;
     letter-spacing: 10px;
     margin: 0;
-    max-width: 100%;
-    margin-top: 360px;
-    font-family: 'Orbitron', sans-serif;
 }
 
 .wormhole-text h3 {
-    top: 0;
     font-size: 1.2rem;
-    max-width: 8000px;
-    text-align: center;
-    margin-left: 40px;
+    margin-top: 20px;
     font-weight: 480;
-    font-family: 'Orbitron', sans-serif;
 }
 
 .wormhole-text p {
-    font-size: 20px;
-    margin: 20px 0 0;
-    max-width: 3000px;
-    margin-bottom: 240px;
+    font-size: 1rem;
+    margin-top: 20px;
     font-family: 'Roboto Mono', serif;
 }
 
-body {
-    font-family: 'Orbitron', sans-serif;
-    color: #F8F6F5;
-    font-size: 16px;
-    line-height: 1.6;
-    position: relative;
-    /* Needed for absolute positioning of About Me */
-}
-
+/* About Me button */
 .about-me {
     position: absolute;
     top: 40px;
-    /* Adjust this value as needed */
     right: 40px;
-    /* Adjust this value as needed */
     color: white;
-    /* Text color */
+    font-size: 1rem;
     padding: 10px;
     border-radius: 5px;
-    font-size: 18px;
-    /* Font size */
 }
 
-/* Container for the running text 
-.running-text-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    color: white;
-    font-size: 12px;
-    z-index: 10;
-    /* Ensure it appears above other content 
-}*/
-
-/* Running text animation 
-.running-text p {
-    display: inline-block;
-    white-space: nowrap;
-    /* Prevent text from wrapping 
-    animation: run-text 40s linear infinite;
-    /* Animation duration and looping 
-}
-
-/* Define the animation 
-@keyframes run-text {
-    0% {
-        transform: translateX(100%);
-        /* Start from right 
-    }
-
-    100% {
-        transform: translateX(-100%);
-        /* End at left 
-    }
-}*/
-
-
-/* Content Section below the wormhole */
+/* Content Section */
 .content-section {
-    /* Full viewport height for scrolling */
-    padding: 0px;
-    text-align: left;
+    padding: 40px 20px;
     background: #758497;
-    /* Contrast background */
     color: #F8F6F5;
-    overflow-y: auto;
-    min-height: 100px;
 }
 
 .content-section h2 {
-    font-size: 24px;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    margin-left: 100px;
+    font-size: 2rem;
+    margin-bottom: 20px;
     font-family: 'Orbitron', sans-serif;
 }
 
 .content-section p {
-    font-size: 20px;
-    margin-left: 100px;
-    margin-bottom: 2px;
+    font-size: 1.1rem;
     font-family: 'Roboto Mono', serif;
+    margin-bottom: 10px;
 }
 
-/* Change the link color */
+/* Links */
 a {
     color: #F8F6F5;
-    /* Color for normal links */
     text-decoration: none;
-    /* Remove the underline */
 }
 
-/* Change the color when the link is visited */
-a:visited {
-    color: #F8F6F5;
-    /* Color for visited links */
-}
-
-/* Change the color when the link is hovered */
 a:hover {
     color: #BADA55;
-    /* Color for links on hover */
 }
 
-/* Change the color when the link is active (being clicked) */
-a:active {
-    color: #F8F6F5;
-    /* Color for active links */
-}
-
-/* Default styles for larger screens */
-body {
-    font-size: 18px;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-}
-
-/* Styles for smaller screens (max-width: 768px) */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-
-    .container {
-        flex-direction: column;
-        /* Stack elements vertically */
-    }
-}
-
-/* Styles for very small screens (max-width: 480px) */
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-}
-
-/* Styling the top navigation menu */
+/* Top Navigation */
 .top-nav {
-
-    /* Dark background */
-    padding: 40px 0;
-    /* Space above and below the links */
+    padding: 20px 0;
     position: fixed;
-    /* Fixes the menu to the top of the page */
-    width: 90%;
-    /* Make the menu span the entire width */
+    width: 100%;
     top: 0;
-    /* Position it at the top of the page */
     left: 0;
-    right: 20;
+    background: transparent;
     z-index: 1000;
-    /* Ensures it stays on top of other elements */
 }
 
-/* Styling the unordered list */
 .top-nav ul {
     list-style: none;
-    /* Remove bullets from list */
     display: flex;
-    /* Arrange items horizontally */
-    /* justify-content: right;*/
-    /* Center the items */
     justify-content: flex-end;
     padding: 0;
     margin: 0;
-
-    /* Styling each list item */
-    .top-nav ul li {
-        list-style: none;
-        margin: 0 40px;
-        /* Space between the items */
-    }
 }
 
-/* Styling the links */
+.top-nav ul li {
+    margin: 0 20px;
+}
+
 .top-nav ul li a {
     color: white;
-    /* White text */
-    text-decoration: none;
-    /* Remove underline */
-    font-size: 14px;
+    font-size: 0.9rem;
     font-family: "Orbitron", sans-serif;
-    /* Font size */
-    /*   text-transform: uppercase;
-    /* Uppercase text */
-    letter-spacing: 4px;
-    padding: 24px 24px;
-    margin-right: 0;
-    /* Spacing between letters */
+    letter-spacing: 2px;
+    padding: 10px;
     transition: color 0.3s ease;
-    /* Smooth transition for hover effect */
 }
 
-/* Hover effect for the links */
 .top-nav ul li a:hover {
     color: #BADA55;
 }
 
+/* Container with image + text (if used later) */
 .container {
     display: flex;
-    flex-grow: 1;
+    flex-direction: row;
+    gap: 40px;
     align-items: center;
     justify-content: flex-start;
-    /* Align to the left */
-    gap: 80px;
+    padding: 20px;
 }
 
 .container img {
-    width: 800px;
+    max-width: 100%;
     height: auto;
-    padding-left: 100px;
 }
 
 .container p {
-    font-size: 20px;
+    font-size: 1rem;
     font-family: "Roboto Mono", serif;
     color: #627EA8;
-    text-align: top;
-    /* Align text to the left */
-    margin: 0;
-    /* Remove any default margin */
-    max-width: 1000px;
-    /* Control the paragraph width */
+    max-width: 600px;
+}
+
+/* --------------------- */
+/* RESPONSIVE ADJUSTMENTS */
+/* --------------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .wormhole-text h1 {
+        font-size: 2.5rem;
+        letter-spacing: 5px;
+    }
+    .wormhole-text h3 {
+        font-size: 1rem;
+    }
+    .wormhole-text p {
+        font-size: 0.9rem;
+    }
+
+    .top-nav ul {
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .wormhole-text h1 {
+        font-size: 1.4rem;
+    }
+    .wormhole-text h3 {
+        font-size: 0.9rem;
+    }
+    .wormhole-text p {
+        font-size: 0.8rem;
+    }
+
+    .about-me {
+        top: 10px;
+        right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .top-nav ul li {
+        margin: 0 10px;
+    }
 }

@@ -1,149 +1,147 @@
+/* Container to center content */
+.container {
+    max-width: 1000px;       /* controls width of text block */
+    margin: 0 auto;         /* centers the container horizontally */
+    padding: 0 20px;        /* optional side padding */
+}
+
 /* Header Styles */
 header {
-
     margin-top: 200px;
-    text-align: left;
-}
-
-h2 {
-    margin-top: 0px;
-    margin-bottom: 80px;
-
-
-    /* Adds space below each header */
-}
-
-h3 {
-    margin-bottom: 80px;
+    text-align: left;       /* keeps text left-aligned */
 }
 
 h1 {
-    margin-top: 240px;
-    margin-bottom: 60px;
-    margin-left: 240px;
+    margin-top: 0;
+    margin-bottom: 40px;
     color: #BAD055;
     letter-spacing: 10px;
     font-family: 'Orbitron', sans-serif;
     font-weight: 400;
-}
-
-
-
-body {
-    font-family: 'Space Mono', serif;
-    font-weight: 400;
-    background: radial-gradient(circle, #000000, #627EA8, #000000);
-    background-color: #627EA899;
-    color: #F8F6F5;
-    font-size: 16px;
-    /* Base font size */
-    line-height: 1.6;
-    /* Line spacing for better readability */
-    min-height: 2000px;
-    margin: 0;
-    padding: 10px;
-}
-
-h1 {
-    font-size: 68px;
-    /* Large font size for the heading */
-    max-width: 1600px;
+    font-size: 3rem;
     text-align: left;
-    /* Limit the heading's width */
 }
 
 h2 {
-    font-size: 68PX;
-    max-width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 2rem;
     font-family: 'Roboto Mono', serif;
 }
 
 h3 {
-    font-size: 38PX;
-    max-width: 1200px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
 }
 
 h4 {
-    font-size: 10PX;
-    max-width: 900px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #BAD055;
 }
 
 p {
-    font-size: 20PX;
-    max-width: 1300px;
-    margin-left: 240px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px; /* spacing between paragraphs */
     font-family: 'Roboto Mono', serif;
+    text-align: left;     /* keep text left-aligned */
 }
 
+/* Links */
 a {
     color: #F8F6F5;
     text-decoration: none;
     margin-right: 10px;
-    /* Adds space between the links */
 }
 
 a:hover {
     color: #BAD055;
 }
 
-/* Styling the top navigation menu */
+/* Top Navigation */
 .top-nav {
-
-    /* Dark background */
-    padding: 40px 0;
-    /* Space above and below the links */
+    padding: 20px 0;
     position: fixed;
-    /* Fixes the menu to the top of the page */
-    width: 90%;
-    /* Make the menu span the entire width */
+    width: 100%;
     top: 0;
-    /* Position it at the top of the page */
     left: 0;
-    right: 20;
+    background: transparent;
     z-index: 1000;
-    /* Ensures it stays on top of other elements */
 }
 
-/* Styling the unordered list */
 .top-nav ul {
     list-style: none;
-    /* Remove bullets from list */
     display: flex;
-    /* Arrange items horizontally */
-    /* justify-content: right;*/
-    /* Center the items */
     justify-content: flex-end;
     padding: 0;
     margin: 0;
+}
 
-    /* Styling each list item */
+.top-nav ul li {
+    margin: 0 20px;
+}
+
+.top-nav ul li a {
+    color: white;
+    font-size: 0.9rem;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 2px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+    color: #BADA55;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Space Mono', serif;
+    font-weight: 400;
+    background: radial-gradient(circle, #000000, #627EA8, #000000);
+    color: #F8F6F5;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.4rem; }
+    h4 { font-size: 1rem; }
+    p { font-size: 0.95rem; }
+}
+
+@media (max-width: 768px) {
+    header, h1, h2, h3, h4, p {
+        margin-left: 0;    /* no extra left margin on smaller screens */
+        text-align: left;
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .top-nav ul li {
-        list-style: none;
-        margin: 0 40px;
-        /* Space between the items */
+        margin: 10px 0;
+    }
+
+    .WSIET {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
-/* Styling the links */
-.top-nav ul li a {
-    color: white;
-    /* White text */
-    text-decoration: none;
-    /* Remove underline */
-    font-size: 14px;
-    font-family: "Orbitron", sans-serif;
-    /* Font size */
-    /*   text-transform: uppercase;
-    /* Uppercase text */
-    letter-spacing: 4px;
-    padding: 24px 24px;
-    margin-right: 0;
-    /* Spacing between letters */
-    transition: color 0.3s ease;
-    /* Smooth transition for hover effect */
-}
-
-/* Hover effect for the links */
-.top-nav ul li a:hover {
-    color: #BADA55;
+@media (max-width: 480px) {
+    body { font-size: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+    h4 { font-size: 1rem; }
+    p { font-size: 0.9rem; }
 }

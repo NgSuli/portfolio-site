@@ -1,166 +1,182 @@
-/* Header Styles */
-header {
-
-    margin-top: 200px;
-    text-align: left;
-}
-
-h2 {
-    margin-top: 20px;
-    margin-bottom: 80px;
-    margin-left: 200px;
-    color: #BAD055;
-    letter-spacing: 6px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 400;
-
-
-    /* Adds space below each header */
-}
-
-h3 {
-    margin-bottom: 40px;
-    margin-left: 360px;
-}
-
-h4 {
-    margin-bottom: 40px;
-    margin-left: 360px;
-}
-
-h1 {
-    margin-top: 240px;
-    margin-bottom: 20px;
-    margin-left: 200px;
-    color: #BAD055;
-    letter-spacing: 10px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 400;
-}
-
-
-
+/* Body */
 body {
-    font-family: 'Space Mono', serif;
+    font-family: 'Space Mono', monospace;
     font-weight: 400;
     background: radial-gradient(circle, #000000, #627EA8, #000000);
-    background-color: #627EA899;
     color: #F8F6F5;
     font-size: 16px;
-    /* Base font size */
     line-height: 1.6;
-    /* Line spacing for better readability */
-    min-height: 8000px;
     margin: 0;
-    padding: 10px;
+    padding: 0 20px;
+    text-align: center; /* centers sections horizontally */
 }
 
-h1 {
-    font-size: 24px;
-    /* Large font size for the heading */
-    max-width: 1600px;
+/* Text sections: left-aligned but centered container */
+header, main, section {
+    display: inline-block;
     text-align: left;
-    /* Limit the heading's width */
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Headers */
+h1 {
+    color: #BAD055;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 400;
+    font-size: 32px;
+    margin-top: 80px;
+    margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 12PX;
-    max-width: 1600px;
+    color: #BAD055;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 20px 0 40px 0;
+    margin-top: 30px;
+    text-align: center;
 }
 
 h3 {
-    font-size: 20PX;
-    max-width: 1600px;
-    font-family: 'Roboto Mono', serif;
+    font-family: 'Roboto Mono', monospace;
     font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 60px;
 }
 
 h4 {
-    font-size: 16PX;
-    max-width: 1600px;
-    font-family: 'Roboto Mono', serif;
+    font-family: 'Roboto Mono', monospace;
     font-weight: 400;
+    font-size: 16px;
     color: #BAD055;
-
+    margin-bottom: 10px;
 }
 
 p {
-    font-size: 16PX;
-    max-width: 1200px;
-    margin-left: 360px;
-    font-family: 'Roboto Mono', serif;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    margin-bottom: 30px;
 }
 
-/* Styling the top navigation menu */
-.top-nav {
-
-    /* Dark background */
-    padding: 40px 0;
-    /* Space above and below the links */
-    position: fixed;
-    /* Fixes the menu to the top of the page */
-    width: 90%;
-    /* Make the menu span the entire width */
-    top: 0;
-    /* Position it at the top of the page */
-    left: 0;
-    right: 20;
-    z-index: 1000;
-    /* Ensures it stays on top of other elements */
+li {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-/* Styling the unordered list */
-.top-nav ul {
-    list-style: none;
-    /* Remove bullets from list */
-    display: flex;
-    /* Arrange items horizontally */
-    /* justify-content: right;*/
-    /* Center the items */
-    justify-content: flex-end;
-    padding: 0;
-    margin: 0;
-
-    /* Styling each list item */
-    .top-nav ul li {
-        list-style: none;
-        margin: 0 40px;
-        /* Space between the items */
-    }
+/* Lists */
+ul, ol {
+    padding-left: 3em;
+    margin-bottom: 20px;
 }
-
-/* Styling the links */
-.top-nav ul li a {
-    color: white;
-    /* White text */
-    text-decoration: none;
-    /* Remove underline */
-    font-size: 14px;
-    font-family: "Orbitron", sans-serif;
-    /* Font size */
-    /*   text-transform: uppercase;
-    /* Uppercase text */
-    letter-spacing: 4px;
-    padding: 24px 24px;
-    margin-right: 0;
-    /* Spacing between letters */
-    transition: color 0.3s ease;
-    /* Smooth transition for hover effect */
-}
-
-
-/* Hover effect for the links */
-.top-nav ul li a:hover {
-    color: #BADA55;
-}
-
 a {
     color: #F8F6F5;
     text-decoration: none;
     margin-right: 10px;
-    /* Adds space between the links */
 }
 
 a:hover {
     color: #BAD055;
 }
+
+/* Images */
+img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* WSIET Image Rows */
+.WSIET-vert {
+    display: flex;
+    flex-wrap:nowrap;
+     /* smaller than before */
+    max-height: auto;
+    width: 300px;
+     max-width: 40%;     /* ensures images shrink on small screens */
+    height: auto;
+    margin: 10px;
+    gap: 20px;
+}
+
+.WSIET {
+    display: flex;
+    flex-wrap:nowrap;
+    width: 500px;       /* smaller than before */
+    max-width: 80%;     /* ensures images shrink on small screens */
+    height: auto;
+    margin: 10px;
+    gap: 30px;
+}
+
+/* Top Navigation */
+.top-nav {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 1000;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.top-nav ul li {
+    margin: 0 20px;
+}
+
+.top-nav ul li a {
+    color: white;
+    font-size: 0.9rem;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 2px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+    color: #BADA55;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 { font-size: 24px; }
+    h2 { font-size: 16px; }
+    h3 { font-size: 18px; }
+    h4 { font-size: 14px; }
+    p, li { font-size: 14px; }
+
+    .WSIET-vert, .WSIET {
+        flex-direction: column; /* stack images on mobile */
+        align-items: center;
+    }
+
+    .WSIET-vert img, .WSIET img {
+        max-width: 90%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .top-nav ul li {
+        margin: 0 10px;
+    }
+}
+
