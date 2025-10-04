@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melanie's Portfolio</title>
+    <link rel="stylesheet" href="wormhole.css">
+    <script src="wormhole.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Orbitron:wght@400..900&family=Playwrite+CO+Guides&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .running-text-container {
+
+            /* Pin it to the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            /* Background color for visibility */
+            color: #F8F6F5;
+            /* Text color */
+            font-size: 12px;
+            z-index: 1000;
+            /* Ensure it stays above other content */
+            padding: 10px 0;
+        }
+
+        .running-text {
+            display: inline-block;
+            white-space: nowrap;
+            /* Prevent wrapping */
+            animation: run-text 50s linear infinite;
+            /* Smooth scrolling animation */
+        }
+
+        @keyframes run-text {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="about-me">
+            <p style="display: flex; gap: 20px;">
+                <span><a href="about.html"> About </a></span>
+            <nav class="top-nav">
+                <ul>
+                    <!-- <li><a href="#home">Home</a></li>-->
+                    <li><a href="PP1.html">Portfolio</a></li>
+                    <li><a href="aboutme.html">About</a></li>
+                    <!-- <li><a href="#services">Services</a></li>-->
+
+                    <!--<li><a href="#contact">Contact</a></li>-->
+                </ul>
+            </nav>
+
+
+
+        </div>
+    </header>
+    <div class="wormhole-container ">
+        <div class="wormhole"></div>
+        <canvas id="wormhole"></canvas>
+        <div class="wormhole-text">
+
+            <h1>Hi, I am Melanie</h1>
+            <!-- <p> My dream is to explore design, technology, and business to create solutions that make a meaningful
+                difference </p> -->
+            <p> My dream is to explore design, technology, and business to solve complex problems that make a meaningful
+                difference </p>
+            <!--<P>My goal is to combine design, technology, and business to solve complex problems and make a meaningful
+                difference.</P>-->
+            <!---  <h3 style="display: flex; gap: 240px;">
+                <span><a href="aboutme.html"> About </a></span>
+                <span> <a href="https://medium.com/byte-by-bytez">
+                        Medium </a></span>
+                <span><a href="works.html"> Works </a></span> 
+            </h3> -->
+
+        </div>
+    </div>
+
+    <div class="running-text-container">
+        <div class="running-text">
+            <div class="running-text">I turn problems into opportunities by combining empathy and systems thinking to
+                create innovative solutions that put people at the center of digital change, driving sustainable impact.
+            </div>
+        </div>
+    </div>
+
+
+    <!--<div class="content-section">
+        <h2>What should I eat tonight? -> Changing the way we cook </h2>
+        <div class="container">
+            <a href="PP1.html">
+                <img src="images/WSIET header.png" alt="Clickable image" width="300" height="150" /> </a>
+
+        </div> -->
+    <script src="wormhole.js"></script>
+
+    </div>
+</body>
+
+</html>
